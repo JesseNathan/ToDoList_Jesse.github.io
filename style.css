@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  font-family : 'poppins', sans-serif;;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection{
+  background-color: #112a34;
+  color: rgb(0, 221, 255);
+  
+}
+
+body{
+  background: rgb(238,174,202);
+  background: linear-gradient(180deg, rgba(238,174,202,1) 0%, rgba(88,126,208,1) 46%, rgba(138,169,207,1) 100%);
+  /* background-repeat: no-repeat; */
+  color: black;
+  width: 100%;
+  height: 1500px;
+} 
+
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+  padding: 20px 10px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  position: fixed;
+  z-index: 2;
+}
+
+nav .profile{
+  margin: -30px;
+  display: flex;
+  /* text-decoration: li; */
+}
+
+nav .list ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav .list ul li a{
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  padding: 0 5px;
+}
+
+nav .list ul li a::after{
+  content: "";
+  position: absolute;
+  background: #8038d8;
+  left: 0;
+  bottom: -10px;
+  height: 3px;
+  width: 0;
+  transition: 0.5s;
+}
+
+nav .list ul li a:hover{
+  color: #fff;
+}
+
+nav .list ul li a:hover:after{
+  width: 100%;
+}
+
+nav .sign-in button{
+  padding:10px;
+  font-weight: 600;
+  border: none;
+  border-radius:25px;
+  cursor: pointer;
+  transition: opacity 2s;
+  margin: 6px;
+}
+
+nav .sign-in button a{
+  text-decoration: none;
+  color: #000;
+}
+
+nav .sign-in button :hover{
+  opacity: .4;
+} 
+
+.container{
+  align-self: center;
+  position: absolute;
+  top: 60px;
+}
+
+.container, .container-header{
+  width: inherit;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.todo-grid, .input-grid{
+  display: grid;
+  grid-template-columns: 280px 150px 100px 100px 50px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin: 10px;
+  justify-content: center;
+}
+
+.name-input{
+  cursor: pointer;
+}
+
+.name-input, .date-input, .time-input{
+  font-size: 15px;
+  padding: 5px 5px 5px 20px ;
+  outline: none;
+}
+
+.todo-grid{
+  text-align: left;
+  font-weight: 600;
+  align-items: center;
+  /* background: red; */
+  align-items: center;
+
+}
+
+.add-todo-btn{
+  padding: 8px;
+  border-radius: 30px;
+  border: none;
+  background-color: #008000;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.delete-todo-btn{
+  background-color: darkred;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.edit-todo-btn{
+  /* background-color: ; */
+  color: white;
+  border: none;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.checked{
+  text-decoration: line-through;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+@media(max-width: 816px){
+  nav .profile p{
+    display: none;
+  }
+}
+
+@media(max-width: 750px){
+  nav .profile img{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 735px ){
+  .input-grid, .todo-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .list{
+    display: none;
+  }
+}
+
+@media (max-width: 705px){
+  .todo-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    }
+}
+
+
+
