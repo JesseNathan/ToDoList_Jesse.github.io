@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (storedPassword && storedPassword == password) {
       alert(`Login berhasil, selamat datang ${username}`);
-      window.location.href = '/TodoList/home.html'; 
+      window.location.href = '/TodoList/index.html'; 
     } else {     
         alert('Nama pengguna atau kata sandi salah');
       } 
